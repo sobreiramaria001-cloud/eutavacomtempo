@@ -1,180 +1,28 @@
-<!DOCTYPE html><html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>💖 Um presentinho pra você 💖</title><style>
+<title>💖 Pra você 💖</title>
+<style>
 body {
-  margin: 0;
-  background: radial-gradient(circle, #ff1a8c, #33001a);
-  font-family: "Comic Sans MS", cursive;
+  background: radial-gradient(circle,#ff1493,#4b0026);
+  font-family: Comic Sans MS;
   color: white;
   text-align: center;
-  overflow: hidden;
 }
-
-.container {
-  position: relative;
-}
-
 h1 {
-  font-size: 3rem;
-  margin-top: 10px;
-  color: #ffb3ff;
-  text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 40px #ff66ff;
-  animation: blink 1s infinite alternate;
+  text-shadow: 0 0 10px white, 0 0 20px pink;
 }
-
-@keyframes blink {
-  from {opacity: 0.6}
-  to {opacity: 1}
+img {
+  width: 400px;
 }
+</style>
+</head>
+<body>
 
-<img class="bouquet" src="https://i.imgur.com/8Km9tLL.gif">
-  width: 650px;
-  filter: drop-shadow(0 0 20px pink);
-  animation: glow 2s infinite;
-}
+<h1>Esqueci de te dar isso aqui ontem, você tava meio rabugento 💐</h1>
 
-@keyframes glow {
-  0% { filter: drop-shadow(0 0 10px white); }
-  50% { filter: drop-shadow(0 0 60px hotpink); }
-  100% { filter: drop-shadow(0 0 10px white); }
-}
+<img src="bouquet.gif">
 
-.side {
-  position: absolute;
-  top: 100px;
-  left: 20px;
-  text-align: left;
-}
-
-.side button {
-  display: block;
-  margin: 10px 0;
-  padding: 10px;
-  background: hotpink;
-  border: none;
-  color: white;
-  border-radius: 10px;
-}
-
-.counter {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  background: black;
-  padding: 10px;
-  border: 2px solid hotpink;
-}
-
-.right-text {
-  position: absolute;
-  right: 30px;
-  top: 150px;
-  font-size: 2rem;
-  color: orange;
-  text-shadow: 0 0 10px yellow;
-}
-
-.popup {
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  background: white;
-  color: black;
-  padding: 15px;
-  border: 3px solid hotpink;
-  display: none;
-}
-
-.button-main {
-  margin-top: 20px;
-  padding: 20px;
-  font-size: 1.5rem;
-  background: hotpink;
-  border: none;
-  border-radius: 15px;
-  color: white;
-  box-shadow: 0 0 30px pink;
-  animation: pulse 1s infinite;
-}
-
-@keyframes pulse {
-  0% {transform: scale(1)}
-  50% {transform: scale(1.1)}
-  100% {transform: scale(1)}
-}
-
-.glitter {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-
-.spark {
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  background: white;
-  border-radius: 50%;
-  animation: twinkle 2s infinite;
-}
-
-@keyframes twinkle {
-  0%,100% {opacity: 0.2}
-  50% {opacity: 1}
-}
-
-marquee {
-  color: yellow;
-  font-size: 1.3rem;
-}
-
-</style></head><body><div class="counter">
-💖 visitante nº <br><strong id="count">000123</strong>
-</div><marquee>💖 ESPECIAL PRA VOCÊ 💖 ESPECIAL PRA VOCÊ 💖</marquee>
-
-<h1>IA TE DAR ISSO AQUI ONTEM MAS VOCÊ TAVA MEIO RABUGENTO💐</h1><div class="container">
-<img class="bouquet" src="https://media.giphy.com/media/3oEjI6SIIHBdRxXI40/giphy.gif">
-</div><div class="side">
-<button>Pra você 💖</button>
-<button>Com carinho 💌</button>
-<button>De coração 💞</button>
-<button>Especial ✨</button>
-</div><div class="right-text">
-Você é NOTA 9.2
-</div><button class="button-main" onclick="abrirPopup()">💌 Clique aqui 💌</button>
-
-<div class="popup" id="popup">
-💖 Você merece todas as flores do mundo! 💖<br><br>
-<button onclick="fecharPopup()">OK</button>
-</div><div class="glitter" id="glitter"></div><audio autoplay loop>
-<source src="https://www.myinstants.com/media/sounds/careless-whisper.mp3">
-</audio><script>
-// glitter
-const glitter = document.getElementById('glitter');
-for(let i=0;i<120;i++){
- let s = document.createElement('div');
- s.className='spark';
- s.style.top=Math.random()*100+'%';
- s.style.left=Math.random()*100+'%';
- s.style.animationDelay=Math.random()*2+'s';
- glitter.appendChild(s);
-}
-
-// contador
-let count=123;
-setInterval(()=>{
- count++;
- document.getElementById('count').innerText=String(count).padStart(6,'0');
-},2000);
-
-function abrirPopup(){
- document.getElementById('popup').style.display='block';
-}
-
-function fecharPopup(){
- document.getElementById('popup').style.display='none';
-}
-</script></body>
+</body>
 </html>
